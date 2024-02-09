@@ -174,8 +174,8 @@ def send_vk(message):
             upload = VkUpload(vk_ref)
             photo = upload.photo(
                 photos=f'images/{str(info[0])}.jpg', 
-                group_id="224618778", 
-                album_id="301477123"
+                group_id=f"{config.GROUP_ID}", 
+                album_id=f"{config.ALBUM_ID}"
             )
             owner_id = photo[0]['owner_id']
             photo_id = photo[0]['id']
